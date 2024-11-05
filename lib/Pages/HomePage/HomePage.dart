@@ -1,3 +1,4 @@
+import 'package:cric_eureka/Components/NavigationBar.dart';
 import 'package:cric_eureka/Pages/HomePage/Widgets/trendingCard.dart';
 import 'package:flutter/material.dart';
 import 'package:cric_eureka/Pages/HomePage/Widgets/Newstile.dart';
@@ -9,12 +10,17 @@ class HomePage extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
+        backgroundColor:Theme.of(context).colorScheme.primary,
+
         title:
         Text("Cric Eureka",
               style: Theme.of(context).textTheme.headlineLarge,
         ),
 
+
       ),
+
+      floatingActionButton:MyBottomNav(),
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
