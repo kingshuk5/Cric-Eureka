@@ -1,5 +1,8 @@
 import 'package:cric_eureka/Config/theme.dart';
+import 'package:cric_eureka/Controller/BottomNavigationController.dart';
+import 'package:cric_eureka/HomePageController.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'Pages/HomePage/HomePage.dart';
 void main() {
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: lightTheme,
       themeMode: ThemeMode.system,
       darkTheme: darkTheme,
-      home: HomePage(),
+      home: Homepagecontroller() ,
     );
   }
 }

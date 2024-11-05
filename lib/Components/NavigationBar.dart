@@ -12,12 +12,13 @@ class MyBottomNav extends StatelessWidget {
     return  Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          SizedBox(width: 30),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
             width: 300 ,
             height: 60,
             decoration: BoxDecoration(
-              color:Theme.of(context).colorScheme.primaryContainer,
+              color:Theme.of(context).colorScheme.surface,
               borderRadius:BorderRadius.circular(100),
             ),
             child: Row(
@@ -52,7 +53,7 @@ class MyBottomNav extends StatelessWidget {
                   child:Obx(()=> AnimatedContainer(
                     duration:Duration(milliseconds:300 ) ,
                     curve: Curves.bounceInOut,
-                    padding: EdgeInsets.all(3),
+                    padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(
                       color:controller.index.value==1
                           ? Theme.of(context).colorScheme.primary
@@ -61,7 +62,7 @@ class MyBottomNav extends StatelessWidget {
                       borderRadius:BorderRadius.circular(100),
                     ),
                     child: Icon(Icons.newspaper,
-                        size: 35,
+                        size: 32,
                         color:controller.index.value==1
                         ? Theme.of(context).colorScheme.onSurface
                         :Theme.of(context).colorScheme.secondary,
