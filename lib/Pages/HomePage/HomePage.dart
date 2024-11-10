@@ -21,16 +21,13 @@ class HomePage extends StatelessWidget{
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                Container(
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.primaryContainer,
-                    borderRadius: BorderRadius.circular(100)
+                  Container(
+                    height: 70,
+                    width: 70,
+                    child: Image.asset(
+                      'assets/NGO_Eureka_copy-removebg-preview.png',
+                    ),
                   ),
-                  child: Icon(Icons.dashboard,
-                    color: Theme.of(context).colorScheme.onSecondary),
-                ),
                 Text(
                   "NGO Eureka",
                    style: TextStyle(
@@ -50,11 +47,11 @@ class HomePage extends StatelessWidget{
                       color: Theme.of(context).colorScheme.onSecondary),
                 ),
               ],),
-              SizedBox(height: 20),
+              SizedBox(height: 6),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Eureka News",
+                  Text("Our Activities",
                   style: Theme.of(context).textTheme.bodyLarge,
                   ),
 
@@ -74,8 +71,8 @@ class HomePage extends StatelessWidget{
                         },
                         imageUrl: "https://plus.unsplash.com/premium_photo-1707080369554-359143c6aa0b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG5ld3N8ZW58MHx8MHx8fDA%3D",
                         title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
-                        author: "Kingshuk hazra",
-                        tag: "Trending No 1",
+                        description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya succeed during an October 7 State House meeting with a large delegation of African and U.S. credit union leaders that included World Council of Credit Unions’ (WOCCU) President and CEO Elissa McCarter LaBorde and Worldwide Foundation for Credit Unions’ (WFCU) Board Chair Bill Cheney.",
+                        date: "7/11/24",
                         place: "Bhatar",
                     ),
                     Trendingcard(
@@ -84,8 +81,8 @@ class HomePage extends StatelessWidget{
                       },
                       imageUrl: "https://t3.ftcdn.net/jpg/03/27/55/60/360_F_327556002_99c7QmZmwocLwF7ywQ68ChZaBry1DbtD.jpg",
                       title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
-                      author: "Arko Hazra",
-                      tag: "Trending No 2",
+                      description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya succeed during an October 7 State House meeting with a large delegation of African and U.S. credit union leaders that included World Council of Credit Unions’ (WOCCU) President and CEO Elissa McCarter LaBorde and Worldwide Foundation for Credit Unions’ (WFCU) Board Chair Bill Cheney.",
+                      date: "7/11/24",
                       place: "Haldia",
                     ),
                     Trendingcard(
@@ -94,8 +91,8 @@ class HomePage extends StatelessWidget{
                       },
                       imageUrl: "https://www.shutterstock.com/shutterstock/photos/2453491007/display_1500/stock-vector-latest-news-poster-banner-graphic-design-icon-logo-sign-symbol-social-media-website-coupon-2453491007.jpg",
                       title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
-                      author: "Srijita Hazra",
-                      tag: "Trending No 3",
+                      description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya succeed during an October 7 State House meeting with a large delegation of African and U.S. credit union leaders that included World Council of Credit Unions’ (WOCCU) President and CEO Elissa McCarter LaBorde and Worldwide Foundation for Credit Unions’ (WFCU) Board Chair Bill Cheney.",
+                      date: "7/11/24",
                       place: "Himachal",
                     ),
 
@@ -106,7 +103,7 @@ class HomePage extends StatelessWidget{
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Cricket News",
+                  Text("Sports Activities",
                     style: Theme.of(context).textTheme.bodyLarge,
                   ),
 
@@ -123,8 +120,9 @@ class HomePage extends StatelessWidget{
                   },
                   imageUrl: "https://plus.unsplash.com/premium_photo-1707080369554-359143c6aa0b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG5ld3N8ZW58MHx8MHx8fDA%3D",
                   title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
-                  author: "Kingshuk hazra",
+                  description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya",
                   time: "Trending No 1",
+                  date:"1/1/25",
                 ),
                 Newstile(
                   ontap: (){
@@ -132,8 +130,9 @@ class HomePage extends StatelessWidget{
                   },
                   imageUrl: "https://t3.ftcdn.net/jpg/03/27/55/60/360_F_327556002_99c7QmZmwocLwF7ywQ68ChZaBry1DbtD.jpg",
                   title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
-                  author: "Kingshuk hazra",
+                  description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya",
                   time: "Trending No 1",
+                  date:"1/1/25",
                 ),
                 Newstile(
                   ontap: (){
@@ -141,8 +140,151 @@ class HomePage extends StatelessWidget{
                   },
                   imageUrl: "https://www.shutterstock.com/shutterstock/photos/2453491007/display_1500/stock-vector-latest-news-poster-banner-graphic-design-icon-logo-sign-symbol-social-media-website-coupon-2453491007.jpg",
                   title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
-                  author: "Kingshuk hazra",
+                  description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya",
                   time: "Trending No 1",
+                  date:"1/1/25",
+                ),
+
+              ],),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Education Activities",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+
+                  Text("See All",
+                    style: Theme.of(context).textTheme.labelSmall,
+                  ),
+                ],
+              ),
+              SizedBox(height: 20,),
+              Column(children: [
+                Newstile(
+                  ontap: (){
+                    Get.to(Newsdetails());
+                  },
+                  imageUrl: "https://plus.unsplash.com/premium_photo-1707080369554-359143c6aa0b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG5ld3N8ZW58MHx8MHx8fDA%3D",
+                  title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
+                  description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya",
+                  time: "Trending No 1",
+                  date:"1/1/25",
+                ),
+                Newstile(
+                  ontap: (){
+                    Get.to(Newsdetails());
+                  },
+                  imageUrl: "https://t3.ftcdn.net/jpg/03/27/55/60/360_F_327556002_99c7QmZmwocLwF7ywQ68ChZaBry1DbtD.jpg",
+                  title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
+                  description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya",
+                  time: "Trending No 1",
+                  date:"1/1/25",
+                ),
+                Newstile(
+                  ontap: (){
+                    Get.to(Newsdetails());
+                  },
+                  imageUrl: "https://www.shutterstock.com/shutterstock/photos/2453491007/display_1500/stock-vector-latest-news-poster-banner-graphic-design-icon-logo-sign-symbol-social-media-website-coupon-2453491007.jpg",
+                  title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
+                  description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya",
+                  time: "Trending No 1",
+                  date:"1/1/25",
+                ),
+
+              ],),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Welfare Activities",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+
+                  Text("See All",
+                    style: Theme.of(context).textTheme.labelSmall,
+                  ),
+                ],
+              ),
+              SizedBox(height: 20,),
+              Column(
+                children: [
+                Newstile(
+                  ontap: (){
+                    Get.to(Newsdetails());
+                  },
+                  imageUrl: "https://plus.unsplash.com/premium_photo-1707080369554-359143c6aa0b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG5ld3N8ZW58MHx8MHx8fDA%3D",
+                  title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
+                  description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya",
+                  time: "Trending No 1",
+                  date:"1/1/25",
+                ),
+                Newstile(
+                  ontap: (){
+                    Get.to(Newsdetails());
+                  },
+                  imageUrl: "https://t3.ftcdn.net/jpg/03/27/55/60/360_F_327556002_99c7QmZmwocLwF7ywQ68ChZaBry1DbtD.jpg",
+                  title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
+                  description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya",
+                  time: "Trending No 1",
+                  date:"1/1/25",
+                ),
+                Newstile(
+                  ontap: (){
+                    Get.to(Newsdetails());
+                  },
+                  imageUrl: "https://www.shutterstock.com/shutterstock/photos/2453491007/display_1500/stock-vector-latest-news-poster-banner-graphic-design-icon-logo-sign-symbol-social-media-website-coupon-2453491007.jpg",
+                  title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
+                  description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya",
+                  time: "Trending No 1",
+                  date:"1/1/25",
+                ),
+
+              ],),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Other Activities",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+
+                  Text("See All",
+                    style: Theme.of(context).textTheme.labelSmall,
+                  ),
+                ],
+              ),
+              SizedBox(height: 20,),
+              Column(children: [
+                Newstile(
+                  ontap: (){
+                    Get.to(Newsdetails());
+                  },
+                  imageUrl: "https://plus.unsplash.com/premium_photo-1707080369554-359143c6aa0b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG5ld3N8ZW58MHx8MHx8fDA%3D",
+                  title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
+                  description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya",
+                  time: "Trending No 1",
+                  date:"1/1/25",
+                ),
+                Newstile(
+                  ontap: (){
+                    Get.to(Newsdetails());
+                  },
+                  imageUrl: "https://t3.ftcdn.net/jpg/03/27/55/60/360_F_327556002_99c7QmZmwocLwF7ywQ68ChZaBry1DbtD.jpg",
+                  title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
+                  description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya",
+                  time: "Trending No 1",
+                  date:"1/1/25",
+                ),
+                Newstile(
+                  ontap: (){
+                    Get.to(Newsdetails());
+                  },
+                  imageUrl: "https://www.shutterstock.com/shutterstock/photos/2453491007/display_1500/stock-vector-latest-news-poster-banner-graphic-design-icon-logo-sign-symbol-social-media-website-coupon-2453491007.jpg",
+                  title: "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
+                  description: "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya",
+                  time: "Trending No 1",
+                  date:"1/1/25",
                 ),
 
               ],)

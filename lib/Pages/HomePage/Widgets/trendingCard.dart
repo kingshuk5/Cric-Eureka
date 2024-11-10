@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 
 class Trendingcard extends StatelessWidget {
   final String imageUrl;
-  final String tag;
-  final String author;
+  final String date;
+  final String description;
   final String title;
   final String place;
   final VoidCallback ontap;
   const Trendingcard({
     super.key,
     required this.imageUrl,
-    required this.tag,
-    required this.author,
+    required this.date,
+    required this.description,
     required this.title,
     required this.place,
     required this.ontap});
@@ -43,42 +43,65 @@ class Trendingcard extends StatelessWidget {
                 fit: BoxFit.cover,)
             ),
           ),
-          SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("$tag",
-                style: Theme.of(context).textTheme.labelSmall,
-              ),
-
-              Text("$place",
-                style: Theme.of(context).textTheme.labelSmall,
-              )
-            ],),
-          SizedBox(height: 5),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Flexible(
-                child: Text(title,
-                  maxLines: 2,
+          SizedBox(height: 10,),
+          Padding(
+            padding: const EdgeInsets.only(left: 5,right: 5),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("$place",
+                  //style:Theme.of(context).textTheme.labelSmall,
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 12,
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
                 ),
-              ),
-            ],),
-          SizedBox(height: 10),
-          Row(children: [
-            SizedBox(width: 10),
-            CircleAvatar(
-              radius: 17,
-              backgroundColor:
-              Theme.of(context).colorScheme.primary,
+
+                Text("$date",
+                  //style: Theme.of(context).textTheme.labelSmall,
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Theme.of(context).colorScheme.secondary,
+                  ),
+                )
+              ],),
+          ),
+          SizedBox(height: 5),
+          Padding(
+            padding: const EdgeInsets.only(left: 5,right: 5),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Flexible(
+                  child: Text(title,
+                    maxLines: 2,
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ],),
+          ),
+          SizedBox(height: 5),
+          Padding(
+            padding: const EdgeInsets.only(left: 5,right: 5),
+            child: Column(children: [
+              // SizedBox(width: 10),
+              // CircleAvatar(
+              //   radius: 17,
+              //   backgroundColor:
+              //   Theme.of(context).colorScheme.primary,
+              // ),
+              SizedBox(width: 5,),
+              Text(
+                "$description",
+                maxLines: 2,
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
+              )
+            ],
             ),
-            SizedBox(width: 10,),
-            Text("$author")
-          ],
           ),
           SizedBox(height: 10),
         ],),

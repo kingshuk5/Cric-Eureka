@@ -4,14 +4,15 @@ class Newstile extends StatelessWidget {
   final String imageUrl;
   final String time;
   final String title;
-  final String author;
+  final String description;
+  final String date;
   final VoidCallback ontap;
   const Newstile({super.key,
     required this.imageUrl,
     required this.time,
     required this.title,
-    required this.author,
-    required this.ontap});
+    required this.description,
+    required this.ontap, required this.date});
 
   @override
   Widget build(BuildContext context) {
@@ -46,24 +47,27 @@ class Newstile extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(children: [
-                    //SizedBox(width: 10),
-                    CircleAvatar(
-                      radius: 12,
-                      backgroundColor:
-                      Theme.of(context).colorScheme.primary,
+                    Text(" $title",
+                      maxLines: 2,
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.onSecondary,
+                          fontSize: 16,
+                      ),
                     ),
-                    SizedBox(width: 10),
-                    Text("$author")
-                  ],
-                  ),
-                  SizedBox(height: 15,),
-                  Text(" $title",
+                  SizedBox(height: 10,),
+                  Text("$description",
                     maxLines: 2,
-                  ),
-                  SizedBox(height: 15,),
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.secondary,
+                        fontSize: 14),
+                    ),
+                  SizedBox(height: 10,),
                   Text("$time",
-                      style:Theme.of(context).textTheme.labelSmall),
+                      //style:Theme.of(context).textTheme.labelSmall),
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.secondary,
+                        fontSize: 12),
+                  ),
                 ],),
             )
           ],

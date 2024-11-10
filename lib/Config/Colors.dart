@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 //Light theme colour
-const lightBgColor = Color(0xffFFFFFF);
+const lightBgColor = Color(0xFFE0E0E0);
 const lightFontColor = Color(0xff191B28);
-const lightDivColor = Color(0xffF5F6FB);
+const lightDivColor = Color(0xFFB2DFDB);
 const lightPrimaryColor = Color(0xff0057FF);
-const lightLableColor = Color(0xff8E8E8E);
+const lightLableColor = Color(0xff34373B);
 
 //Dark Theme Colour
 const darkBgColor =Color(0xff191B28);
