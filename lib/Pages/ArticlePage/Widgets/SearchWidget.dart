@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import '../../HomePage/HomePage.dart';
 
 class Searchwidget extends StatelessWidget {
   const Searchwidget({super.key});
@@ -12,6 +16,19 @@ class Searchwidget extends StatelessWidget {
         color:Theme.of(context).colorScheme.secondaryContainer,
       ),
       child: Row(children: [
+        InkWell(
+          onTap: (){
+            Get.back();
+          },
+          child: Container(
+            child: Row(
+              children: [
+                Icon(Icons.arrow_back_sharp,
+                  color:Theme.of(context).colorScheme.onPrimaryContainer,),
+              ],
+            ),
+          ),
+        ),
         Expanded(child: TextField(
           decoration: InputDecoration(
             hintText: "Search News...",

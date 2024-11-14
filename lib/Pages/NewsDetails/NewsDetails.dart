@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../../Model/NewsModel.dart';
+
 
 class Newsdetails extends StatelessWidget {
-  const Newsdetails({super.key});
+  final NewsModel news;
+  const Newsdetails({super.key,required this.news,});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +36,7 @@ class Newsdetails extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 10),
                 Container(
                   height: 330 ,
                   decoration: BoxDecoration(
@@ -44,7 +47,7 @@ class Newsdetails extends StatelessWidget {
                     Expanded(child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Image.network(
-                        "https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp",
+                        news.urlToImage??"https://www.gasso.com/wp-content/uploads/2017/04/noimage.jpg",
                         fit:BoxFit.cover,
                       ),
                     ),
@@ -53,7 +56,7 @@ class Newsdetails extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Text(
-                  "Tittle Tittle Tittle Tittle Tittle Tittle Tittle",
+                   news.title??"" ,
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
@@ -62,31 +65,29 @@ class Newsdetails extends StatelessWidget {
                 SizedBox(height: 10),
                 Row(children: [
                   Text(
-                    "2 Day Ago",
+                    news.publishedAt??"",
                     style: Theme.of(context).textTheme.labelSmall,
                   ),
                 ],),
                 SizedBox(height: 10),
-                Row(children: [
-                  CircleAvatar(
-                    radius: 15,
-                    backgroundColor: Colors.red,
-                  ),
-                  SizedBox(width: 10),
-                  Text(
-                    "Kingshuk Hazra",
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Theme.of(context).colorScheme.onSecondary,
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(children: [
+                    Text(
+                      news.author??"",
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Theme.of(context).colorScheme.onSecondary,
+                      ),
                     ),
-                  ),
-                ],),
+                  ],),
+                ),
                 SizedBox(height: 20),
                 Row(
                   children: [
                     Flexible(
                       child: Text(
-                        "MADISON, Wis.—President William Ruto of Kenya confirmed cooperatives are central to his government’s priorities and that he wants to see the savings and credit cooperative (SACCO) movement in Kenya succeed during an October 7 State House meeting with a large delegation of African and U.S. credit union leaders that included World Council of Credit Unions’ (WOCCU) President and CEO Elissa McCarter LaBorde and Worldwide Foundation for Credit Unions’ (WFCU) Board Chair Bill Cheney.",
+                       news.description??"" ,
                         style: TextStyle(
                           fontSize: 18,
                           color: Theme.of(context).colorScheme.onSecondary,

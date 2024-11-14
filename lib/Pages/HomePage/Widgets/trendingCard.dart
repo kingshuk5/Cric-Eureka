@@ -46,25 +46,28 @@ class Trendingcard extends StatelessWidget {
           SizedBox(height: 10,),
           Padding(
             padding: const EdgeInsets.only(left: 5,right: 5),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("$place",
-                  //style:Theme.of(context).textTheme.labelSmall,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Theme.of(context).colorScheme.secondary,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("$place",
+                    //style:Theme.of(context).textTheme.labelSmall,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Theme.of(context).colorScheme.secondary,
+                    ),
                   ),
-                ),
-
-                Text("$date",
-                  //style: Theme.of(context).textTheme.labelSmall,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Theme.of(context).colorScheme.secondary,
-                  ),
-                )
-              ],),
+                  SizedBox(width: 50,),
+                  Text("$date",
+                    //style: Theme.of(context).textTheme.labelSmall,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Theme.of(context).colorScheme.secondary,
+                    ),
+                  )
+                ],),
+            ),
           ),
           SizedBox(height: 5),
           Padding(

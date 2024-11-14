@@ -26,7 +26,7 @@ class Cricketpage extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        "CORPORATE CHAMPIONS LEAGUE",
+                        "CORPORATE CRICKET LEAGUE",
                         style: TextStyle(
                           fontSize: 15,
                           fontFamily: "Poppins",
