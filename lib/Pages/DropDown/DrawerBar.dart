@@ -5,6 +5,7 @@ import 'package:cric_eureka/Pages/DropDown/Terms.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DrawerBar extends StatelessWidget {
   const DrawerBar({super.key});
@@ -74,7 +75,54 @@ class DrawerBar extends StatelessWidget {
                 Get.to(Contactus());
               }
           ),
-
+          SizedBox(height: 10,),
+          ListTile(
+              leading: Icon(Icons.ondemand_video_rounded),
+              title: Text("YouTube"),
+              onTap: (){
+                const link="https://www.youtube.com/@ngoeureka";
+                launchUrl(
+                  Uri.parse(link),
+                  mode: LaunchMode.externalApplication,
+                );
+              },
+          ),
+          SizedBox(height: 10,),
+          ListTile(
+            leading: Icon(Icons.facebook_rounded),
+            title: Text("FaceBook"),
+            onTap: (){
+              const link="https://www.facebook.com/haldia.eureka.7";
+              launchUrl(
+                Uri.parse(link),
+                mode: LaunchMode.externalApplication,
+              );
+            },
+          ),
+          SizedBox(height: 10,),
+          ListTile(
+            leading: Icon(Icons.insert_photo_outlined),
+            title: Text("Instagram"),
+            onTap: (){
+              const link="https://www.instagram.com/ngoeureka";
+              launchUrl(
+                Uri.parse(link),
+                mode: LaunchMode.externalApplication,
+              );
+            },
+          ),
+          SizedBox(height: 10,),
+          ListTile(
+            leading: Icon(Icons.web_sharp),
+            title: Text("Our Website"),
+            onTap: (){
+              const link="https://www.ngoeureka.com";
+              launchUrl(
+                Uri.parse(link),
+                mode: LaunchMode.externalApplication,
+              );
+            },
+          ),
     ],
     ),
 

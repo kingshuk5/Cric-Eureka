@@ -17,6 +17,7 @@ class Trendingcard extends StatelessWidget {
     required this.place,
     required this.ontap});
 
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -46,20 +47,17 @@ class Trendingcard extends StatelessWidget {
           SizedBox(height: 10,),
           Padding(
             padding: const EdgeInsets.only(left: 5,right: 5),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
+            child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("$place",
+                  Text(place,
                     //style:Theme.of(context).textTheme.labelSmall,
                     style: TextStyle(
                       fontSize: 12,
                       color: Theme.of(context).colorScheme.secondary,
                     ),
                   ),
-                  SizedBox(width: 50,),
-                  Text("$date",
+                  Text(date.substring(0,10),
                     //style: Theme.of(context).textTheme.labelSmall,
                     style: TextStyle(
                       fontSize: 12,
@@ -67,7 +65,6 @@ class Trendingcard extends StatelessWidget {
                     ),
                   )
                 ],),
-            ),
           ),
           SizedBox(height: 5),
           Padding(

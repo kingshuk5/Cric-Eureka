@@ -1,11 +1,13 @@
+import 'package:cric_eureka/Controller/CricketController.dart';
 import 'package:cric_eureka/Pages/CricketPage/Widgets/CricketScorecard.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 class Cricketpage extends StatelessWidget {
   const Cricketpage ({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
+  Cricketcontroller cricketcontroller= Get.put(Cricketcontroller());
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(10),
@@ -39,26 +41,77 @@ class Cricketpage extends StatelessWidget {
               Column(
                   children: [
                     SizedBox(height:10),
-                    CricketScoreCard(
-                          teamA: 'India',
-                          teamB: 'Pakistan',
-                          teamAScore: '220/3',
-                          teamBScore: '110/5',
-                          overs: '11.4',
-                          status: "Match Started, India Won the Toss",
-                          isBreak: true,
-                          isBowling:false,
-                          isLive: true,
-                          date: 'Fri, Feb 24',
-                          time: '5:10 Pm',
-                          teamALogo: "https://upload.wikimedia.org/wikipedia/mai/1/11/India_national_cricket_team.png",
-                          teamBLogo: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Pakistan_cricket_team_logo.png",)
-                      ],
+                    Obx((){
+                      return
+                        Column(
+                            children: cricketcontroller.LiveScoreList.map((element)=>CricketScoreCard(
+                                teamA: element.teamA??"Team A",
+                                teamB: element.teamB??"Team B",
+                                teamAScore: element.teamAScore??"0/0",
+                                teamBScore: element.teamBScore??"0/0",
+                                overs: element.overs??"0.0",
+                                status: element.status??"",
+                                isBreak: element.isBreak??false,
+                                isBowling:element.isABowling??false,
+                                isLive: element.isLive??true,
+                                date: element.date??"",
+                                time: element.time??"",
+                                teamALogo:element.teamALogo?? "",
+                                teamBLogo: element.teamBLogo??"",
+                                Link: element.ytLink??"",
+                            )
+                            ).toList()
+                        );
+                      },
                     ),
-            ],
-          ),
+                  ],
               ),
-        ),
+                    SizedBox(height: 20,),
+                    Text(
+                      "Matches",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w600,
+                        letterSpacing:1.5,
+                      ),),
+                    SizedBox(height: 20,),
+              Column(
+                children: [
+                  SizedBox(height:10),
+                  Obx((){
+                    return
+                      Column(
+                          children: cricketcontroller.PastMatchesList.map((element)=>CricketScoreCard(
+                            teamA: element.teamA??"Team A",
+                            teamB: element.teamB??"Team B",
+                            teamAScore: element.teamAScore??"0/0",
+                            teamBScore: element.teamBScore??"0/0",
+                            overs: element.overs??"0.0",
+                            status: element.status??"",
+                            isBreak: element.isBreak??false,
+                            isBowling:element.isABowling??false,
+                            isLive: false,
+                            date: element.date??"",
+                            time: element.time??"",
+                            teamALogo:element.teamALogo?? "",
+                            teamBLogo: element.teamBLogo??"",
+                            Link: element.ytLink??"https://www.youtube.com/@ngoeureka",
+                          ),
+                          ).toList()
+                      );
+                  },
+                  ),
+                  SizedBox(height:10),
+                ],
+              ),
+
+
+
+            ]
+          ),
+          ),
+      ),
     );
   }
 }

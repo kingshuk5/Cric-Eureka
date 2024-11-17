@@ -1,122 +1,95 @@
-/// source : {"id":"techcrunch","name":"TechCrunch"}
-/// author : "Lauren Forristal"
-/// title : "Bye-bye bots: Altera's game-playing AI agents get backing from Eric Schmidt | TechCrunch"
-/// description : "Autonomous, AI-based players are coming to a gaming experience near you, and a new startup, Altera, is joining the fray to build this new guard of AI Research company Altera raised $9 million to build AI agents that can play video games alongside other player…"
-/// url : "https://techcrunch.com/2024/05/08/bye-bye-bots-alteras-game-playing-ai-agents-get-backing-from-eric-schmidt/"
-/// urlToImage : "https://techcrunch.com/wp-content/uploads/2024/05/Minecraft-keyart.jpg?resize=1200,720"
-/// publishedAt : "2024-05-08T15:14:57Z"
-/// content : "Autonomous, AI-based players are coming to a gaming experience near you, and a new startup, Altera, is joining the fray to build this new guard of AI agents.\r\nThe company announced Wednesday that it … [+6416 chars]"
+/// _id : "67363f48e54b83e753f0bb7e"
+/// title : "jgydgfhgkjv"
+/// description : "k;;oyiluktliyp8to7rto867ritouyrkg"
+/// place : "haldia"
+/// category : "Welfare"
+/// imageUrl : "https://res.cloudinary.com/dvql4mu3f/image/upload/v1731608390/tsnqt9habz8qqqvh7qlo.png"
+/// createdAt : "2024-11-14T18:19:52.686Z"
+/// updatedAt : "2024-11-14T18:19:52.686Z"
+/// __v : 0
 
 class NewsModel {
   NewsModel({
-      Source? source, 
-      String? author, 
+      String? id, 
       String? title, 
       String? description, 
-      String? url, 
-      String? urlToImage, 
-      String? publishedAt, 
-      String? content,}){
-    _source = source;
-    _author = author;
+      String? place, 
+      String? category, 
+      String? imageUrl, 
+      String? createdAt, 
+      String? updatedAt, 
+      num? v,}){
+    _id = id;
     _title = title;
     _description = description;
-    _url = url;
-    _urlToImage = urlToImage;
-    _publishedAt = publishedAt;
-    _content = content;
+    _place = place;
+    _category = category;
+    _imageUrl = imageUrl;
+    _createdAt = createdAt;
+    _updatedAt = updatedAt;
+    _v = v;
 }
 
   NewsModel.fromJson(dynamic json) {
-    _source = json['source'] != null ? Source.fromJson(json['source']) : null;
-    _author = json['author'];
+    _id = json['_id'];
     _title = json['title'];
     _description = json['description'];
-    _url = json['url'];
-    _urlToImage = json['urlToImage'];
-    _publishedAt = json['publishedAt'];
-    _content = json['content'];
-  }
-  Source? _source;
-  String? _author;
-  String? _title;
-  String? _description;
-  String? _url;
-  String? _urlToImage;
-  String? _publishedAt;
-  String? _content;
-NewsModel copyWith({  Source? source,
-  String? author,
-  String? title,
-  String? description,
-  String? url,
-  String? urlToImage,
-  String? publishedAt,
-  String? content,
-}) => NewsModel(  source: source ?? _source,
-  author: author ?? _author,
-  title: title ?? _title,
-  description: description ?? _description,
-  url: url ?? _url,
-  urlToImage: urlToImage ?? _urlToImage,
-  publishedAt: publishedAt ?? _publishedAt,
-  content: content ?? _content,
-);
-  Source? get source => _source;
-  String? get author => _author;
-  String? get title => _title;
-  String? get description => _description;
-  String? get url => _url;
-  String? get urlToImage => _urlToImage;
-  String? get publishedAt => _publishedAt;
-  String? get content => _content;
-
-  Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
-    if (_source != null) {
-      map['source'] = _source?.toJson();
-    }
-    map['author'] = _author;
-    map['title'] = _title;
-    map['description'] = _description;
-    map['url'] = _url;
-    map['urlToImage'] = _urlToImage;
-    map['publishedAt'] = _publishedAt;
-    map['content'] = _content;
-    return map;
-  }
-
-}
-
-/// id : "techcrunch"
-/// name : "TechCrunch"
-
-class Source {
-  Source({
-      String? id, 
-      String? name,}){
-    _id = id;
-    _name = name;
-}
-
-  Source.fromJson(dynamic json) {
-    _id = json['id'];
-    _name = json['name'];
+    _place = json['place'];
+    _category = json['category'];
+    _imageUrl = json['imageUrl'];
+    _createdAt = json['createdAt'];
+    _updatedAt = json['updatedAt'];
+    _v = json['__v'];
   }
   String? _id;
-  String? _name;
-Source copyWith({  String? id,
-  String? name,
-}) => Source(  id: id ?? _id,
-  name: name ?? _name,
+  String? _title;
+  String? _description;
+  String? _place;
+  String? _category;
+  String? _imageUrl;
+  String? _createdAt;
+  String? _updatedAt;
+  num? _v;
+NewsModel copyWith({  String? id,
+  String? title,
+  String? description,
+  String? place,
+  String? category,
+  String? imageUrl,
+  String? createdAt,
+  String? updatedAt,
+  num? v,
+}) => NewsModel(  id: id ?? _id,
+  title: title ?? _title,
+  description: description ?? _description,
+  place: place ?? _place,
+  category: category ?? _category,
+  imageUrl: imageUrl ?? _imageUrl,
+  createdAt: createdAt ?? _createdAt,
+  updatedAt: updatedAt ?? _updatedAt,
+  v: v ?? _v,
 );
   String? get id => _id;
-  String? get name => _name;
+  String? get title => _title;
+  String? get description => _description;
+  String? get place => _place;
+  String? get category => _category;
+  String? get imageUrl => _imageUrl;
+  String? get createdAt => _createdAt;
+  String? get updatedAt => _updatedAt;
+  num? get v => _v;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
-    map['id'] = _id;
-    map['name'] = _name;
+    map['_id'] = _id;
+    map['title'] = _title;
+    map['description'] = _description;
+    map['place'] = _place;
+    map['category'] = _category;
+    map['imageUrl'] = _imageUrl;
+    map['createdAt'] = _createdAt;
+    map['updatedAt'] = _updatedAt;
+    map['__v'] = _v;
     return map;
   }
 

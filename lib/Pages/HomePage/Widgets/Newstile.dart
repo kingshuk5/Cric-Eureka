@@ -62,7 +62,7 @@ class Newstile extends StatelessWidget {
                         fontSize: 14),
                     ),
                   SizedBox(height: 10,),
-                  Text("$time",
+                  Text(time.substring(0,10),
                       //style:Theme.of(context).textTheme.labelSmall),
                     style: TextStyle(
                         color: Theme.of(context).colorScheme.secondary,

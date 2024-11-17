@@ -47,7 +47,7 @@ class Newsdetails extends StatelessWidget {
                     Expanded(child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Image.network(
-                        news.urlToImage??"https://www.gasso.com/wp-content/uploads/2017/04/noimage.jpg",
+                        news.imageUrl??"https://www.gasso.com/wp-content/uploads/2017/04/noimage.jpg",
                         fit:BoxFit.cover,
                       ),
                     ),
@@ -63,25 +63,21 @@ class Newsdetails extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 10),
-                Row(children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
                   Text(
-                    news.publishedAt??"",
+                    news.updatedAt?.substring(0,10)??"",
                     style: Theme.of(context).textTheme.labelSmall,
                   ),
-                ],),
-                SizedBox(height: 10),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(children: [
-                    Text(
-                      news.author??"",
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: Theme.of(context).colorScheme.onSecondary,
-                      ),
+                  Text(
+                    news.place??"",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Theme.of(context).colorScheme.onSecondary,
                     ),
-                  ],),
-                ),
+                  ),
+                ],),
                 SizedBox(height: 20),
                 Row(
                   children: [
