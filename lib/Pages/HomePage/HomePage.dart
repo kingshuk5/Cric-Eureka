@@ -1,4 +1,3 @@
-import 'package:cric_eureka/Components/NavigationBar.dart';
 import 'package:cric_eureka/Components/NewsTileLoading.dart';
 import 'package:cric_eureka/Components/TrendingLoadingCard.dart';
 import 'package:cric_eureka/Controller/NewsController.dart';
