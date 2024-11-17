@@ -12,7 +12,7 @@ class Cricketcontroller extends GetxController {
 
 
   // RxBool isLiveLoading =false.obs;
-  // RxBool isPastLoading =false.obs;
+  RxBool isPastLoading =false.obs;
 
 
 
@@ -67,7 +67,7 @@ class Cricketcontroller extends GetxController {
     //isLiveLoading.value=false;
   }
   Future<void>getPastMatches()async{
-    //isLiveLoading.value=true;
+    isPastLoading.value=true;
     var baseURL="https://ngo-eureka-my.vercel.app/api/v1/matches";
     try{
       var response = await http.get(Uri.parse(baseURL));
@@ -89,7 +89,7 @@ class Cricketcontroller extends GetxController {
     }catch(ex){
       print(ex);
     }
-    //isLiveLoading.value=false;
+    isPastLoading.value=false;
   }
 
 }

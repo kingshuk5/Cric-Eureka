@@ -79,9 +79,9 @@ class Cricketpage extends StatelessWidget {
               Column(
                 children: [
                   SizedBox(height:10),
-                  Obx((){
-                    return
-                      Column(
+                  Obx(()=>cricketcontroller.isPastLoading.value
+                      ?CircularProgressIndicator()
+                      :Column(
                           children: cricketcontroller.PastMatchesList.map((element)=>CricketScoreCard(
                             teamA: element.teamA??"Team A",
                             teamB: element.teamB??"Team B",
@@ -99,8 +99,7 @@ class Cricketpage extends StatelessWidget {
                             Link: element.ytLink??"https://www.youtube.com/@ngoeureka",
                           ),
                           ).toList()
-                      );
-                  },
+                      ),
                   ),
                   SizedBox(height:10),
                 ],
