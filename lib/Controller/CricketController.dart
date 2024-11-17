@@ -16,6 +16,7 @@ class Cricketcontroller extends GetxController {
 
 
 
+  @override
   void onInit() async{
     super.onInit();
     //getLiveScore();

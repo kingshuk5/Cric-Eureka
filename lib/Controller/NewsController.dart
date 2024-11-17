@@ -23,6 +23,7 @@ class Newscontroller extends GetxController {
   RxBool isOthersList = false.obs;
 
 
+  @override
   void onInit() async {
     super.onInit();
     getTrendingNews();
