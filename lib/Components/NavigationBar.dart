@@ -94,6 +94,31 @@ class MyBottomNav extends StatelessWidget {
                   ),
                 ),),
                 ),
+                InkWell(
+                  onTap: (){
+                    controller.index.value=3;
+                  },
+                  child: Obx(()=>AnimatedContainer(
+                    duration:Duration(milliseconds:300 ) ,
+                    curve: Curves.bounceInOut,
+                    width: 40,
+                    height: 40,
+                    padding: EdgeInsets.all(3),
+                    decoration: BoxDecoration(
+                      color:controller.index.value==3
+                          ? Theme.of(context).colorScheme.primary
+                          :null,
+                      //color: Theme.of(context).colorScheme.primary,
+                      borderRadius:BorderRadius.circular(100),
+                    ),
+                    child: Icon(Icons.person,
+                      size: 35,
+                      color:controller.index.value==3
+                          ? Theme.of(context).colorScheme.onSurface
+                          :Theme.of(context).colorScheme.secondary,
+                    ),
+                  ),),
+                ),
 
               ],
             ),

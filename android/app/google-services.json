@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "786029137312",
+    "project_id": "cric-eureka",
+    "storage_bucket": "cric-eureka.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786029137312:android:bca2c0c72709c5a37068c5",
+        "android_client_info": {
+          "package_name": "com.example.cric_eureka"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDT8mYm8s0thIp05Rn-YjOv9wHXIpMSnYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
