@@ -40,7 +40,7 @@ class Newscontroller extends GetxController {
     isEducationList.value = true;
     isWelfareList.value = true;
     isOthersList.value = true;
-    var baseURL = "https://ngo-eureka-my.vercel.app/api/v1/news";
+    var baseURL = "https://ngo-eureka-vc.vercel.app/api/v1/news";
     try {
       var response = await http.get(Uri.parse(baseURL));
       //print(response);
