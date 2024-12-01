@@ -33,6 +33,6 @@ class Pasttimeline extends StatelessWidget {
           );
         },
       ),
-    );;
+    );
   }
 }
