@@ -23,7 +23,7 @@ Cric-Eureka is a powerful and engaging cricket live score and news app built wit
 ## Tech Stack
 
 - **Frontend**: Flutter
-- **Backend**: Firebase for authentication and Mongodb for data
+- **Backend**: Firebase for authentication and Mongodb for database
 - **Development Tools**: Next js (for web-based admin porta;)
 
 ---
