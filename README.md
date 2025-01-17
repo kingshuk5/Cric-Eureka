@@ -15,7 +15,7 @@ Cric-Eureka is a powerful and engaging cricket live score and news app built wit
 
 ### Admin Features
 - **Firebase Admin Integration**: Manage and update match scores and news articles via Firebase.
-- **Real-Time Updates**: Admins can update live scores every 2 minutes during matches.
+- **Real-Time Updates**: Admins can update live scores every 10 sec during matches.
 - ** Next js admin portal
 
 ---
